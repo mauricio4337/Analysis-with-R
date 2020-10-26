@@ -1,0 +1,17 @@
+
+
+Min.   1st Qu.   Median   Mean   3rd Qu.   Max. 
+1463   1497      1500     1500   1501      1536
+
+
+Lot1
+mean = 1500.018
+stdev = 1.070525
+
+Lot2
+mean = 1499.571
+stdev = 3.183003
+
+Lot3
+mean = 1499.004
+stdev = 14.832753

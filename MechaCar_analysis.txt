@@ -1,0 +1,36 @@
+For the multiple linear regression model on the MechaCar_mpg.csv I obtained the following
+
+y = 6.2671x1 + 0.0012x2 + 0.0688x3 + 3.5455x4 - 3.4115x5 + 103.9640
+
+Where y = mpg, x1 = vehicle length, x2 = vehicle weight, x3 = spoiler angle,
+x4 = ground clearance, x5 = AWD
+
+Coefficients:
+(Intercept)           x1           x2           x3  
+ 103.963979     6.267128     0.001245     0.068766  
+         x4           x5  
+   3.545534    -3.411499
+
+
+Summary statistics for Linear Regression Model
+____________________________________________________________
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.5849  -5.4433   0.0692   4.4994  19.4701 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 103.963979  15.850376   6.559 5.08e-08 ***
+x1            6.267128   0.655348   9.563 2.60e-12 ***
+x2            0.001245   0.000689   1.807   0.0776 .  
+x3            0.068766   0.066526   1.034   0.3069    
+x4            3.545534   0.541191   6.551 5.21e-08 ***
+x5           -3.411499   2.534697  -1.346   0.1852    
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.774 on 44 degrees of freedom
+Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
+F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
+_____________________________________________________________
