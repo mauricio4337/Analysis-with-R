@@ -34,3 +34,14 @@ Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 _____________________________________________________________
+
+
+Analysis of Summary statistics
+***********************************************************************************
+The small p values for x1 and x4 mean that it is unlikely that any relation between
+these variables (vehicle length and ground clearance respectively) and mpg are 
+unlikely to occur due to chance.  Note that the t-value for these variables is also
+an indicator that these variables are significant to mpg, since their values suggest 
+we should reject the null hypothesis.  The multiple R-squared value suggest a linear
+relationship with significant deviation from the linear model.
+***********************************************************************************
