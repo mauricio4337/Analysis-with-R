@@ -1,8 +1,28 @@
+Questions:
+How much variation(in the PSI) exist in the coils?  
+What is the source of this variation?
 
-
+Summary for entire Suspension data set
+_______________________________________________
 Min.   1st Qu.   Median   Mean   3rd Qu.   Max. 
 1463   1497      1500     1500   1501      1536
+_______________________________________________
 
+The whole set data shows that there are one or more outliers in 
+the data as the interquartile range is small(IQR = 1) with 
+Q3 + 1.5IQR < Max and Q1 - 1.5IQR > Min.
+
+
+Assuming that the errors in the production for coils are random
+in nature, a normal distribution is used to model the expected
+variation from expected/intended value.
+In order to answer what the source of the variation in the data,
+I grouped the data by Lots and computed the mean and standard
+deviation for each Lot.  Each Lot has mean value very close to
+1500 PSI (the likely production target for the coils), however
+the lots have an increasing standard deviation. Telling us that
+controlling the error in the coils manufactured is the worst in
+Lot 3.
 
 Lot1
 mean = 1500.018
@@ -15,3 +35,34 @@ stdev = 3.183003
 Lot3
 mean = 1499.004
 stdev = 14.832753
+
+If we let x = Lot1 and y = Lot 2  and compare them with a t-test
+we get a small confidence interval, meaning we have a confidence
+that the means of the two populations are similar:
+
+Welch Two Sample t-test
+
+data:  x$PSI and y$PSI
+t = 0.94185, df = 59.945, p-value = 0.35
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.5026969  1.3973088
+sample estimates:
+mean of x mean of y 
+ 1500.018  1499.571 
+
+However, if we compare x = Lot1 and z = Lot3, we get a much larger
+confidence interval, meaning the there is a strong likelihood that
+to two means will vary quite a bit as the sample size increases.
+	Welch Two Sample t-test
+
+data:  x$PSI and z$PSI
+t = 0.48227, df = 49.51, p-value = 0.6317
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.211021  5.239548
+sample estimates:
+mean of x mean of y 
+ 1500.018  1499.004
+
+
